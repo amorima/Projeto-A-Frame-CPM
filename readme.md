@@ -123,3 +123,9 @@ Para executar este projeto num ambiente local, siga os seguintes passos:
 3.  **Abrir o projeto:**
     * Abra o ficheiro `index.html` diretamente num navegador web compatível.
     * Alternativamente, para uma melhor experiência e para evitar potenciais problemas de CORS (Cross-Origin Resource Sharing) com os *assets*, recomenda-se a utilização de um servidor local. Caso tenha o Node.js instalado, pode-se utilizar o comando `npx http-server` na diretoria do projeto, ou recorrer a extensões como "Live Server" no Visual Studio Code.
+  
+## 🙏 Agradecimentos
+
+* Escola Superior de Media Artes e Design (ESMAD)
+* Politécnico do Porto (P.PORTO)
+* Prof. Bárbara Cleto
