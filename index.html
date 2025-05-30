@@ -39,7 +39,19 @@
       <a-box position="-18.390 -1.247 -4.117" rotation="0.058 -90.115 0" scale="4.718 0.947 0.947" width="25" height="0.1" depth="0.2" color="#444444"></a-box>
 
       <!-- Modelo 3D -->
-      <a-entity gltf-model="/modelos/train/scene.gltf" position="-19.645 -2.542 -165.62" rotation="0 179.845 0" scale="2 2 2"></a-entity>
+      <a-entity
+        gltf-model="/modelos/train/scene.gltf"
+        position="-19.645 -2.542 -165.62"
+        rotation="0 179.845 0"
+        scale="2 2 2"
+        animation="property: position;
+                   from: 19.645 -2.542 265.62;
+                   to: 19.645 -2.542 -265.62;
+                   dir: alternate;
+                   loop: true;
+                   dur: 10000;
+                   easing: linear">
+      </a-entity>
 
       <!-- Paredes -->
       <a-box position="0 5 43.605" scale="0.748 1 40.348" width="40" height="10" depth="0.5" color="#5B5B5B" material="src: #concrete; repeat: 8 2"></a-box>
@@ -186,10 +198,6 @@
         <a-box position="7.2 0.334 -24.043" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
         <a-box position="7.2 0.334 -27.936" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
       </a-entity>
-
-      <!-- Caixotes do lixo -->
-      <a-entity gltf-model="/modelos/lixo/scene.gltf" position="1.614 0 -30" scale="1.63 1.637 1.552" rotation="0 0 0"></a-entity>
-      <a-entity gltf-model="/modelos/lixo/scene.gltf" position="-1.614 0 -10" scale="1.63 1.637 1.552" rotation="0 0 0"></a-entity>
 
       <!-- Máquina de vendas -->
       <a-entity gltf-model="/modelos/maquina/scene.gltf" position="-0.028 1.965 8.471" scale="2.193 1.938 1.197" rotation="0 0 0"></a-entity>
