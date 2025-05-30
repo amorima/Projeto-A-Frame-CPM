@@ -1,0 +1,11 @@
+Model Information:
+* title:	Queensland Rail EMU (Low Poly)
+* source:	https://sketchfab.com/3d-models/queensland-rail-emu-low-poly-47f3a898ef624ec59bc29b0a3f6c23c1
+* author:	Jotrain (https://sketchfab.com/Jotrain)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Queensland Rail EMU (Low Poly)" (https://sketchfab.com/3d-models/queensland-rail-emu-low-poly-47f3a898ef624ec59bc29b0a3f6c23c1) by Jotrain (https://sketchfab.com/Jotrain) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

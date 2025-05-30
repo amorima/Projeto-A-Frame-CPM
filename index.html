@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paragem de Metro A-Frame</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene background="color: #333333">
+      <a-assets>
+        <img id="concrete" src="/img/textures/concrete1.jpg">
+        <img id="concrete2" src="/img/textures/concrete2.jpg">
+        <img id="concrete3" src="/img/textures/concrete3.jpg">
+        <img id="nao_compliques" src="/img/cartazes/Nao_compliques.jpg">
+        <img id="tasteit" src="/img/cartazes/tasteit.jpg">
+        <img id="discoverit" src="/img/cartazes/discoverit.jpg">
+        <img id="captureit" src="/img/cartazes/captureit.jpg">
+        <img id="celebrateit" src="/img/cartazes/celebrateit.jpg">
+      </a-assets>
+
+      <a-entity camera look-controls wasd-controls position="0.002 1.6 19.245"></a-entity>
+
+      <!-- Luzes -->
+      <a-entity light="type: ambient; color: #BBBBBB"></a-entity>
+      <a-entity light="type: directional; color: #FFFFFF; intensity: 0.8" position="-5 5 5" rotation="-45 0 0"></a-entity>
+      <a-entity light="type: directional; color: #FFFFFF; intensity: 0.6" position="5 5 -5" rotation="-45 180 0"></a-entity>
+
+      <!-- Chão principal -->
+      <a-plane position="0 0 -5" rotation="-90 0 0" scale="1 3.862 1" width="30" height="20"  color="#767676" shadow material="src: #concrete2; repeat:8 16"></a-plane>
+
+      <!-- Plataformas e carris -->
+      <a-plane position="20.194 -1.257 -4.540" rotation="-90 -90 0" scale="3.868 0.947 0.947" width="30" height="10" color="#333333" shadow></a-plane>
+      <a-box position="22.006 -1.243 -4.110" rotation="0.058 -90.115 0" scale="4.718 0.947 0.947" width="25" height="0.1" depth="0.2" color="#444444"></a-box>
+      <a-box position="18.390 -1.247 -4.117" rotation="0.058 -90.115 0" scale="4.718 0.947 0.947" width="25" height="0.1" depth="0.2" color="#444444"></a-box>
+      <a-plane position="-20.194 -1.257 -4.540" rotation="-90 -90 0" scale="3.868 0.947 0.947" width="30" height="10" color="#333333" shadow></a-plane>
+      <a-box position="-22.006 -1.243 -4.110" rotation="0.058 -90.115 0" scale="4.718 0.947 0.947" width="25" height="0.1" depth="0.2" color="#444444"></a-box>
+      <a-box position="-18.390 -1.247 -4.117" rotation="0.058 -90.115 0" scale="4.718 0.947 0.947" width="25" height="0.1" depth="0.2" color="#444444"></a-box>
+
+      <!-- Modelo 3D -->
+      <a-entity gltf-model="/modelos/train/scene.gltf" position="-19.645 -2.542 -165.62" rotation="0 179.845 0" scale="2 2 2"></a-entity>
+
+      <!-- Paredes -->
+      <a-box position="0 5 43.605" scale="0.748 1 40.348" width="40" height="10" depth="0.5" color="#5B5B5B" material="src: #concrete; repeat: 8 2"></a-box>
+      <a-box position="0 5 -53.605" scale="0.748 1 39.921" width="40" height="10" depth="0.5" color="#5B5B5B" material="src: #concrete; repeat: 8 2"></a-box>
+      <a-box position="-15.223 -6.091 -4.611" scale="1 1.22 2.452" width="0.5" height="10" depth="50" color="#222"></a-box>
+      <a-box position="15.238 -6.091 -4.611" scale="1 1.22 2.452" width="0.5" height="10" depth="50" color="#222"></a-box>
+      <a-box position="-25.127 4.711 -4.611" scale="1 1.22 2.452" width="0.5" height="10" depth="50" color="#5B5B5B" material="src: #concrete; repeat: 8 2"></a-box>
+      <a-box position="25.127 4.711 -4.611" scale="1 1.22 2.452" width="0.5" height="10" depth="50" color="#5B5B5B" material="src: #concrete; repeat: 8 2"></a-box>
+      <a-box position="-3.026 3.839 -62.5887" scale="1.419 1.560 1" width="40" height="10" depth="0.5" color="#5B5B5B" material="src: #concrete; repeat: 8 2"></a-box>
+      <a-box position="-3.026 3.839 53.822" scale="1.419 1.560 1" width="40" height="10" depth="0.5" color="#5B5B5B" material="src: #concrete; repeat: 8 2"></a-box>
+
+      <!-- Paredes translúcidas -->
+      <a-box position="0.961 5 47.962" scale="1.372 1.649 1" width="40" height="10" depth="0.5" color="#000" opacity="0.79" transparent="true" shadow="receive: false; cast: false"></a-box>
+      <a-box position="0.823 5 43.981" scale="1.372 1.649 1" width="40" height="10" depth="0.5" color="#000" opacity="0.79" transparent="true" shadow="receive: false; cast: false"></a-box>
+      <a-box position="0.823 5 -59.069" scale="1.372 1.649 1" width="40" height="10" depth="0.5" color="#000" opacity="0.79" transparent="true" shadow="receive: false; cast: false"></a-box>
+      <a-box position="0.823 5 -56.169" scale="1.372 1.649 1" width="40" height="10" depth="0.5" color="#000" opacity="0.79" transparent="true" shadow="receive: false; cast: false"></a-box>
+
+      <!-- Teto -->
+      <a-box position="0 10 -10" scale="1.944 1 2.222" width="40" height="0.5" depth="50" color="#444" ></a-box>
+
+      <!-- Luzes do teto -->
+      <a-box position="-7.092 9.723 13.920" scale="5.598 1.484 1" width="0.1" height="0.1" depth="15" color="#ADD8E6" light="type: point; intensity: 0.5; color: #ADD8E6"></a-box>
+      <a-box position="-7.092 9.723 -6.012" scale="5.598 1.484 1" width="0.1" height="0.1" depth="15" color="#ADD8E6" light="type: point; intensity: 0.5; color: #ADD8E6"></a-box>
+      <a-box position="-7.092 9.723 -25.993" scale="5.598 1.484 1" width="0.1" height="0.1" depth="15" color="#ADD8E6" light="type: point; intensity: 0.5; color: #ADD8E6"></a-box>
+      <a-box position="7.187 9.723 13.920" scale="5.598 1.484 1" width="0.1" height="0.1" depth="15" color="#ADD8E6" light="type: point; intensity: 0.5; color: #ADD8E6"></a-box>
+      <a-box position="7.187 9.723 -6.012" scale="5.598 1.484 1" width="0.1" height="0.1" depth="15" color="#ADD8E6" light="type: point; intensity: 0.5; color: #ADD8E6"></a-box>
+      <a-box position="7.187 9.723 -25.993" scale="5.598 1.484 1" width="0.1" height="0.1" depth="15" color="#ADD8E6" light="type: point; intensity: 0.5; color: #ADD8E6"></a-box>
+
+      <!-- Escadas -->
+      <a-entity id="escadas-metro">
+        <a-box position="0 0.0 22" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 0.5 22.7" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 1.0 23.4" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 1.5 24.1" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 2.0 24.8" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 2.5 25.5" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 3.0 26.2" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 3.5 26.9" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 4.0 27.6" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 4.5 28.3" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 5.0 29.0" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 5.5 29.7" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 6.0 30.4" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 6.5 31.1" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 7.0 31.8" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 7.5 32.5" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 8.0 33.2" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 8.5 33.9" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+        <a-box position="0 9.0 34.6" width="6" height="0.5" depth="0.7" color="#888"></a-box>
+
+        <a-box position="-3.150 -0.339 28.700" rotation="0 0 0" scale="1 0.650 1" width="0.3" height="11" depth="14" color="#5B5B5B" material="src: #concrete; repeat: 4 2"></a-box>
+        <a-box position="-3.150 4.096 29.828" rotation="-37.207 0 0" scale="1 0.767 1" width="0.3" height="11" depth="14" color="#5B5B5B" material="src: #concrete; repeat: 4 2"></a-box>
+        <a-box position="3.150 -0.339 28.700" rotation="0 0 0" scale="1 0.650 1" width="0.3" height="11" depth="14" color="#5B5B5B" material="src: #concrete; repeat: 4 2"></a-box>
+        <a-box position="3.150 4.096 29.828" rotation="-37.207 0 0" scale="1 0.767 1" width="0.3" height="11" depth="14" color="#5B5B5B" material="src: #concrete; repeat: 4 2"></a-box>
+
+        <a-cylinder position="-2.947 5.602 27.279" rotation="0.372 89.693 52.945" radius="0.07" height="13" color="#bbb"></a-cylinder>
+        <a-cylinder position="2.947 5.602 27.279" rotation="0.372 89.693 52.945" radius="0.07" height="13" color="#bbb"></a-cylinder>
+      </a-entity>
+
+      <!-- Mupis e cartazes -->
+      <a-entity id="mupi-group" position="0 0 0">
+        <a-box position="0 5 -30" scale="1.970 1 1.939" width="1" height="10" depth="1" color="#5B5B5B" shadow material="src: #concrete; repeat: 3 4"></a-box>
+        <a-box position="0 5 -20" scale="1.970 1 1.939" width="1" height="10" depth="1" color="#5B5B5B" shadow material="src: #concrete; repeat: 3 4"></a-box>
+        <a-box position="0 5 -10" scale="1.970 1 1.939" width="1" height="10" depth="1" color="#5B5B5B" shadow material="src: #concrete; repeat: 3 4"></a-box>
+        <a-box position="0 5 0" scale="1.970 1 1.939" width="1" height="10" depth="1" color="#5B5B5B" shadow material="src: #concrete; repeat: 3 4"></a-box>
+        <a-box position="0 5 10" scale="1.970 1 1.939" width="1" height="10" depth="1" color="#5B5B5B" shadow material="src: #concrete; repeat: 3 4"></a-box>
+
+        <a-box position="0 0.5 -28.531" scale="1 1 3.4" width="3.2" height="1.2" depth="0.1" color="#222"></a-box>
+        <a-box position="0 2.842 -28.545" scale="1 1.239 6.334" width="3.2" height="3.2" depth="0.1" color="#222"></a-box>
+        <a-plane position="0 2.842 -28.210" scale="1 1.243 1" width="2.8" height="2.8" src="#celebrateit" material="side: front"></a-plane>
+
+        <a-box position="0 0.5 -18.531" scale="1 1 3.4" width="3.2" height="1.2" depth="0.1" color="#222"></a-box>
+        <a-box position="0 2.842 -18.545" scale="1 1.239 6.334" width="3.2" height="3.2" depth="0.1" color="#222"></a-box>
+        <a-plane position="0 2.842 -18.210" scale="1 1.243 1" width="2.8" height="2.8" src="#captureit" material="side: front"></a-plane>
+
+        <a-box position="0 0.5 -8.531" scale="1 1 3.4" width="3.2" height="1.2" depth="0.1" color="#222"></a-box>
+        <a-box position="0 2.842 -8.545" scale="1 1.239 6.334" width="3.2" height="3.2" depth="0.1" color="#222"></a-box>
+        <a-plane position="0 2.842 -8.210" scale="1 1.243 1" width="2.8" height="2.8" src="#discoverit" material="side: front"></a-plane>
+
+        <a-box position="0 0.5 1.531" scale="1 1 3.4" width="3.2" height="1.2" depth="0.1" color="#222"></a-box>
+        <a-box position="0 2.842 1.545" scale="1 1.239 6.334" width="3.2" height="3.2" depth="0.1" color="#222"></a-box>
+        <a-plane position="0 2.842 1.87" scale="1 1.243 1" width="2.8" height="2.8" src="#tasteit" material="side: front"></a-plane>
+
+        <a-box position="0 0.5 11.531" scale="1 1 3.4" width="3.2" height="1.2" depth="0.1" color="#222"></a-box>
+        <a-box position="0 2.842 11.545" scale="1 1.239 6.334" width="3.2" height="3.2" depth="0.1" color="#222"></a-box>
+        <a-plane position="0 2.85 11.87" scale="1 1.243 1" width="2.8" height="2.8" src="#nao_compliques" material="side: front"></a-plane>
+      </a-entity>
+
+      <!-- Placar de destino na lateral esquerda do pilar -->
+      <a-entity>
+      <!-- Placa branca -->
+      <a-plane position="-2.194 6.778 -9.901" rotation="0 0 0" width="2.2" height="0.7" color="#fff" material="side: double"></a-plane>
+      <a-plane position="-2.194 6.778 -10.021" rotation="0 0 0" width="2.2" height="0.7" color="#fff" material="side: double"></a-plane>
+      <!-- Moldura preta -->
+      <a-box position="-2.178 6.779 -9.961" scale="2.383 0.909 0.106" width="1" height="1" depth="1" color="#222"></a-box>
+      <!-- Texto do destino -->
+      <a-text value="TSIW" position="-2.214 6.779 -9.878" rotation="0 0 0" width="6" color="#222" align="center" font-weight="bold"></a-text>
+      <a-text value="TSIW" position="-2.100 6.779 -10.062" rotation="0 180 0" width="6" color="#222" align="center" font-weight="bold"></a-text>
+      </a-entity>
+
+      <a-entity>
+      <!-- Placa branca -->
+      <a-plane position="2.194 6.778 -9.901" rotation="0 0 0" width="2.2" height="0.7" color="#fff" material="side: double"></a-plane>
+      <a-plane position="2.194 6.778 -10.021" rotation="0 0 0" width="2.2" height="0.7" color="#fff" material="side: double"></a-plane>
+      <!-- Moldura preta -->
+      <a-box position="2.161 6.779 -9.961" scale="2.383 0.909 0.106" width="1" height="1" depth="1" color="#222"></a-box>
+      <!-- Texto do destino -->
+      <a-text value="ESMAD" position="2.214 6.779 -9.878" rotation="0 0 0" width="6" color="#222" align="center" font-weight="bold"></a-text>
+      <a-text value="ESMAD" position="2.100 6.779 -10.062" rotation="0 -180 0" width="6" color="#222" align="center" font-weight="bold"></a-text>
+      </a-entity>
+              
+      <!-- Bancos de estação -->
+      <!-- Esquerda -->
+      <a-entity>
+        <!-- Assento -->
+        <a-box position="-7.1 0.6 13.9" scale="0.385 1 6.486" width="2.2" height="0.15" depth="0.6" color="#145A32"></a-box>
+        <!-- Pernas (frente e trás) -->
+        <a-box position="-7.1 0.334 11.950" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+        <a-box position="-7.1 0.334 15.858" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+      </a-entity>
+      <a-entity>
+        <a-box position="-7.1 0.6 -6.0" scale="0.385 1 6.486" width="2.2" height="0.15" depth="0.6" color="#145A32"></a-box>
+        <a-box position="-7.1 0.334 -4.049" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+        <a-box position="-7.1 0.334 -7.959" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+      </a-entity>
+      <a-entity>
+        <a-box position="-7.1 0.6 -25.99" scale="0.385 1 6.486" width="2.2" height="0.15" depth="0.6" color="#145A32"></a-box>
+        <a-box position="-7.1 0.334 -24.043" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+        <a-box position="-7.1 0.334 -27.936" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+      </a-entity>
+      <!-- Direita -->
+      <a-entity>
+        <a-box position="7.2 0.6 13.9" scale="0.385 1 6.486" width="2.2" height="0.15" depth="0.6" color="#145A32"></a-box>
+        <a-box position="7.2 0.334 11.950" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+        <a-box position="7.2 0.334 15.858" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+      </a-entity>
+      <a-entity>
+        <a-box position="7.2 0.6 -6.0" scale="0.385 1 6.486" width="2.2" height="0.15" depth="0.6" color="#145A32"></a-box>
+        <a-box position="7.2 0.334 -4.049" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+        <a-box position="7.2 0.334 -7.959" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+      </a-entity>
+      <a-entity>
+        <a-box position="7.2 0.6 -25.99" scale="0.385 1 6.486" width="2.2" height="0.15" depth="0.6" color="#145A32"></a-box>
+        <a-box position="7.2 0.334 -24.043" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+        <a-box position="7.2 0.334 -27.936" scale="0.435 2.881 1" width="2.2" height="0.25" depth="0.08" color="#bbb"></a-box>
+      </a-entity>
+
+      <!-- Caixotes do lixo -->
+      <a-entity gltf-model="/modelos/lixo/scene.gltf" position="1.614 0 -30" scale="1.63 1.637 1.552" rotation="0 0 0"></a-entity>
+      <a-entity gltf-model="/modelos/lixo/scene.gltf" position="-1.614 0 -10" scale="1.63 1.637 1.552" rotation="0 0 0"></a-entity>
+
+      <!-- Máquina de vendas -->
+      <a-entity gltf-model="/modelos/maquina/scene.gltf" position="-0.028 1.965 8.471" scale="2.193 1.938 1.197" rotation="0 0 0"></a-entity>
+      <a-entity gltf-model="/modelos/maquina/scene.gltf" position="-0.028 1.965 -11.536" scale="2.193 1.938 1.197" rotation="0 0 0"></a-entity>
+      <a-entity gltf-model="/modelos/maquina/scene.gltf" position="-0.028 1.965 -31.545" scale="2.193 1.938 1.197" rotation="0 0 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
